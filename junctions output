@@ -1,0 +1,63 @@
+***junctions
+[
+    [
+        {
+            'char': 'a',
+            'hadal': {'a': [1, 3]},
+            'parvitude': {'a': [1]}
+        },
+        {
+            'char': 'd',
+            'hadal': {'d': [2]},
+            'parvitude': {'d': [7]}
+        }
+    ],
+    [
+        {
+            'peruvian': {'a': [6]},
+            'char': 'a',
+            'hadal': {'a': [1, 3]}
+        }
+    ],
+    [
+        {
+            'peruvian': {
+                'a': [6]
+            },
+            'char': 'a',
+            'parvitude': {
+                'a': [1]
+            }
+        },
+        {
+            'peruvian': {
+                'e': [1]
+            },
+            'char': 'e',
+            'parvitude': {
+                'e': [8]
+            }
+        },
+        {
+            'peruvian': {'i': [5]},
+            'char': 'i',
+            'parvitude': {'i': [4]}},
+        {
+            'peruvian': {'p': [0]},
+            'char': 'p',
+            'parvitude': {'p': [0]}},
+        {
+            'peruvian': {'r': [2]},
+            'char': 'r',
+            'parvitude': {'r': [2]}},
+        {
+            'peruvian': {'u': [3]},
+            'char': 'u',
+            'parvitude': {'u': [6]}},
+        {
+            'peruvian': {'v': [4]},
+            'char': 'v',
+            'parvitude': {'v': [3]}
+        }
+    ]
+]
