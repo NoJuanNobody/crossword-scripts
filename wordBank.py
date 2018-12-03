@@ -1,34 +1,29 @@
 import Word as WD
 import combinator as COM
 
-
 class WordBank:
         def  __init__(self):
-                self.junctions=[]
+                self.wordPairs=[]
                 self.words = []
 
         def freq(self, arr):
                 return lambda x:[i for (y, i) in zip(arr, range(len(arr))) if x == y]
 
-        def compare_word_histograms(self, wordOne, wordTwo):
-                primary = wordOne if len(wordOne.uniqueChars) < len(wordTwo.uniqueChars) else wordTwo
-                secondary = wordOne if (primary != wordOne) else wordTwo
-                for pChar in primary.uniqueChars:
-
-                        if(len(secondary.exists(pChar)) > 0):
-                                self.junctions.append(WD.Junction(pChar, primary, secondary))
+        def compare_word_histograms(self, wordPair):
+                junctions = []
+                for pChar in wordPair.primary.uniqueChars:
+                        if(len(wordPair.secondary.exists(pChar)) > 0):
+                                junctions.append(WD.Junction(pChar, wordPair.primary, wordPair.secondary))
+                wordPair.add_junctions(junctions)
+                self.wordPairs.append(wordPair)
 
         def findWordJunctions(self, wordStrings):
                 for wordStr in wordStrings:
                         self.words.append(WD.Word(wordStr))
-                COM.Combinator(self.compare_word_histograms).iterate(self.words)
+                self.history = COM.Combinator(self.compare_word_histograms).iterate(self.words)
 
-        def count_junctions_by_char(self):
-                self.charCount = {}
-                for junction in self.junctions:
-                        if junction.char in self.charCount:
-                                self.charCount[junction.char] += 1
-                        else:
-                                self.charCount.update({junction.char:1})
-                print('junction count',self.charCount)
-
+        def get_combinations(self):
+                historyDictionary = {}
+                for combination in self.history:
+                        historyDictionary.update({combination:combination.split()})
+                return historyDictionary

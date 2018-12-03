@@ -1,10 +1,9 @@
 from wordBank import WordBank
+from pairSelector import PairSelector
 words = ['hadal','parvitude','peruvian', 'boring']
 bank = WordBank()
 bank.findWordJunctions(words)
-bank.count_junctions_by_char()
-
-
+selector = PairSelector(bank.wordPairs)
 
 #  *separate script for assembling words and junctions to be layout friendly
 # ? could have alot to do with word length and number or junctions available after

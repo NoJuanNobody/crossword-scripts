@@ -5,7 +5,7 @@ class Junction:
         self.secondary = secondary
         self.primaryWordIndex = primary.find_hist_entry(char)
         self.secondaryWordIndex = secondary.find_hist_entry(char)
-        self.select()
+        self.unselect()
         # print(self.char, self.primary.word, self.secondary.word)
     def select(self):
         self.selected = True
@@ -15,3 +15,4 @@ class Junction:
 
     def is_neighbor(self):
         self.neighbor = True
+
