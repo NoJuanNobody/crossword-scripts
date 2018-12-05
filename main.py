@@ -1,9 +1,36 @@
 from wordBank import WordBank
 from pairSelector import PairSelector
-words = ['hadal','parvitude','peruvian', 'boring']
-bank = WordBank()
-bank.findWordJunctions(words)
-selector = PairSelector(bank.wordPairs)
+
+from crossword import Crossword
+from Word import Word
+from junction import Junction
+
+# words = ['hadal','parvitude','peruvian', 'boring']
+# bank = WordBank()
+# bank.findWordJunctions(words)
+# selector = PairSelector(bank.wordPairs)
+
+
+hadal = Word('hadal')
+parvitude = Word('parvitude')
+aJunc = Junction('a', hadal, parvitude)
+crosswrd = Crossword(hadal)
+
+crosswrd.place_word(parvitude, aJunc)
+origin = {
+    'x':100,
+    'y':100
+}
+locale = {
+    'index':2,
+    'origin':origin
+}
+crosswrd.update_crossword_coords(locale)
+for key, value in crosswrd.words.items():
+    for tile in value.tiles:
+        print(key, '=>', tile.char, tile.x, tile.y,)
+
+
 
 #  *separate script for assembling words and junctions to be layout friendly
 # ? could have alot to do with word length and number or junctions available after

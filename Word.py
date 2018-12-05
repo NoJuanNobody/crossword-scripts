@@ -1,4 +1,3 @@
-from junction import Junction
 from Histogram import Histogram
 
 class Word:
