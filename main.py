@@ -5,30 +5,31 @@ from crossword import Crossword
 from Word import Word
 from junction import Junction
 
-# words = ['hadal','parvitude','peruvian', 'boring']
-# bank = WordBank()
-# bank.findWordJunctions(words)
-# selector = PairSelector(bank.wordPairs)
+words = ['hadal','parvitude','peruvian', 'boring']
+bank = WordBank()
+bank.findWordJunctions(words)
+selector = PairSelector(bank.wordPairs)
+first = selector.next()
+second = selector.next()
+third = selector.next()
 
+print(first.name, second.name, third.name)
 
-hadal = Word('hadal')
-parvitude = Word('parvitude')
-aJunc = Junction('a', hadal, parvitude)
-crosswrd = Crossword(hadal)
+# crosswrd = Crossword(selector.next().words[0])
 
-crosswrd.place_word(parvitude, aJunc)
-origin = {
-    'x':100,
-    'y':100
-}
-locale = {
-    'index':2,
-    'origin':origin
-}
-crosswrd.update_crossword_coords(locale)
-for key, value in crosswrd.words.items():
-    for tile in value.tiles:
-        print(key, '=>', tile.char, tile.x, tile.y,)
+# crosswrd.place_word(parvitude, aJunc)
+# origin = {
+#     'x':100,
+#     'y':100
+# }
+# locale = {
+#     'index':2,
+#     'origin':origin
+# }
+# crosswrd.update_crossword_coords(locale)
+# for key, value in crosswrd.words.items():
+#     for tile in value.tiles:
+#         print(key, '=>', tile.char, tile.x, tile.y,)
 
 
 

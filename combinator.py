@@ -13,7 +13,6 @@ class Combinator:
             for index2, entity2 in enumerate(arr):
                 if(index == index2):
                     continue
-                # create new wordpair
                 wPair = WordPair(entity, entity2)
                 if(not self.get_indexes(wPair.name, self.history) and not self.get_indexes(wPair.reverseName, self.history)):
                     self.result.append(self.cb(wPair))

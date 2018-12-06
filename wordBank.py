@@ -1,5 +1,6 @@
-import Word as WD
-import combinator as COM
+from Word import Word
+from combinator import Combinator
+from junction import Junction
 
 class WordBank:
         def  __init__(self):
@@ -13,14 +14,14 @@ class WordBank:
                 junctions = []
                 for pChar in wordPair.primary.uniqueChars:
                         if(len(wordPair.secondary.exists(pChar)) > 0):
-                                junctions.append(WD.Junction(pChar, wordPair.primary, wordPair.secondary))
+                                junctions.append(Junction(pChar, wordPair.primary, wordPair.secondary))
                 wordPair.add_junctions(junctions)
                 self.wordPairs.append(wordPair)
 
         def findWordJunctions(self, wordStrings):
                 for wordStr in wordStrings:
-                        self.words.append(WD.Word(wordStr))
-                self.history = COM.Combinator(self.compare_word_histograms).iterate(self.words)
+                        self.words.append(Word(wordStr))
+                self.history = Combinator(self.compare_word_histograms).iterate(self.words)
 
         def get_combinations(self):
                 historyDictionary = {}

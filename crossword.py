@@ -100,3 +100,5 @@ class Crossword:
             for tile in word.tiles:
                 tile.x += lastLocale['origin']['x']
                 tile.y += lastLocale['origin']['y']
+
+    # todo pass wordpair to crossword?
