@@ -15,8 +15,9 @@ class WordBank:
                 for pChar in wordPair.primary.uniqueChars:
                         if(len(wordPair.secondary.exists(pChar)) > 0):
                                 junctions.append(Junction(pChar, wordPair.primary, wordPair.secondary))
-                wordPair.add_junctions(junctions)
-                self.wordPairs.append(wordPair)
+                if(junctions):
+                        wordPair.add_junctions(junctions)
+                        self.wordPairs.append(wordPair)
 
         def findWordJunctions(self, wordStrings):
                 for wordStr in wordStrings:
