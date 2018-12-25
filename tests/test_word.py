@@ -17,19 +17,9 @@ class WordTest(unittest.TestCase):
         -original word is present in word instance
         - histogram is present
         """
-        uniquechars = self.word.get_unique_chars()
+        print("word is initializing correctly")
+        uniquechars = self.word.get_unique_chars_str()
         self.assertTrue(len(uniquechars) == 8)
         for char in self.originalWord:
             self.assertTrue(uniquechars.find(char) > -1)
 
-    def testFindHistEntry(self):
-        """ tests that correct histogram entries are returned"""
-        char = 'o'
-        entry = self.word.find_hist_entry(char)
-        self.assertTrue(entry)
-        self.assertTrue(entry.char == char)
-        self.assertTrue(len(entry.indexes) == 2)
-        self.assertEqual([1,6],entry.indexes)
-
-    if __name__ == '__main__':
-        unittest.main()

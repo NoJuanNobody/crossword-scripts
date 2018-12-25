@@ -1,18 +1,29 @@
-
+from HistEntry import HistEntry
+from combinator import Combinator
 class Histogram:
-    def __init__(self, uniqueChars, word):
+    def __init__(self, referenceChars, entities, unique):
         self.hist = {}
-        for char in uniqueChars:
-            self.hist.update({char:HistEntry(char, word)})
+        for ent in entities:
+            for char in referenceChars:
+                if(unique):
+                    key = char+"_"+ent
+                else:
+                    key = char
+                self.hist.update({key:HistEntry(char, ent)})
 
     def get_hist_entry(self, char):
         for key in self.hist.keys():
             if(char == key):
                 return self.hist[key]
+    
+    def get_junctions(self, char):
+        entries = []
+        for key, value in self.hist.items():
+            if(key[:1] == char):
+                entries.append(value)
+        combinator = Combinator(self.junctionCallback)
+        res =  combinator.cross_prod(entries[0].indexes, entries[1].indexes)
+        return (char, res)
 
-class HistEntry:
-    def __init__(self, char, word):
-        self.char = char
-        self.indexes = self.get_indexes(char, word)
-
-    get_indexes = lambda self, x, xs:[i for (y, i) in zip(xs, range(len(xs))) if x == y]
+    def junctionCallback(self, ent, ent2):
+        return [ent, ent2]

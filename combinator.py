@@ -1,4 +1,3 @@
-from wordPair import WordPair
 
 class Combinator:
     def __init__(self, cb):
@@ -13,8 +12,14 @@ class Combinator:
             for index2, entity2 in enumerate(arr):
                 if(index == index2):
                     continue
-                wPair = WordPair(entity, entity2)
-                if(not self.get_indexes(wPair.name, self.history) and not self.get_indexes(wPair.reverseName, self.history)):
-                    self.result.append(self.cb(wPair))
-                    self.history.append(wPair.name)
-        return self.history
+                self.result.append(self.cb(entity, entity2))
+        return self.result
+
+#	todo: write cross product
+    def cross_prod(self, arr, arr2):
+        self.history = []
+        self.result = []
+        for entity in enumerate(arr):
+            for entity2 in enumerate(arr2):
+                self.result.append(self.cb(entity[1], entity2[1]))
+        return self.result
