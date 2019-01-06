@@ -72,3 +72,6 @@ class WordPair:
                 self.potentialE.append((self.calculate_Entanglement(juncs), junction))
         self.potentialE.sort(key=self.sort_E)
         return self.potentialE  
+
+    def compare_wordstrings(self, wrdstr):
+        return ''.join(self.wordstrings).find(wrdstr) > -1

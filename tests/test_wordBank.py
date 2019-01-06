@@ -50,3 +50,20 @@ class WordBankTest(unittest.TestCase):
         framePrime = self.bank.get_frame_at(self.bank.history)
         testArr = [{'wednesday': 7, 'auror': 0}, {'author': 4, 'auror': 3}]
         self.assertListEqual(framePrime["s_junctions"], testArr, "junctions should match")
+
+    def test_merge_snakes(self):
+        """
+            given a snake arr and a junction object, test that the fn
+            correctly find the right snake occurance and merges the snake\junction
+            or adds a new snake instance
+        """
+        print("merging snake test")
+        self.bank.iterateState()
+        self.bank.shake_junctions()
+        self.bank.shake_wp()
+        frame = self.bank.get_frame_at(self.bank.history)
+        # todo: get junction
+        jun = frame["wordpairs"][2][0]
+        snakes = [[frame["wordpairs"][0]]]
+        self.bank.merge_snakes(snakes,jun)
+        self.assertFalse(True)

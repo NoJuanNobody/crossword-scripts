@@ -71,15 +71,15 @@ class WordBank:
                                                         item[1].pop(0)
                                                 else:
                                                         selectedJunctions.append(item[1][0][1])
-                                                        self.remove_word_list(frame["words"], item[1][0][1])
-                                                        self.merge_snakes(frame["snakes"], item[1][0][1])
+                                                        # self.remove_word_list(frame["words"], item[1][0][1])
+                                                        # self.merge_snakes(frame["snakes"], item[1][0][1])
                                                         #	todo: add snake to snakes list, or modify/merge entry if one or more words are already in snakes 
                                                         loop = False                                                
                                                         break
                         else:
                                 selectedJunctions.append(item[1][0][1])
-                                self.remove_word_list(frame["words"], item[1][0][1])
-                                self.merge_snakes(frame["snakes"], item[1][0][1])
+                                # self.remove_word_list(frame["words"], item[1][0][1])
+                                # self.merge_snakes(frame["snakes"], item[1][0][1])
                                 #	todo: add snake to snakes list, or modify/merge entry if one or more words are already in snakes 
                         #	todo: take item and pop words from word list
                         #	todo: when all words in arr are paired, use snakes to start new frame/iterate state
@@ -96,26 +96,9 @@ class WordBank:
                                 i += 1
 
         def merge_snakes(self, snakes,  junction):
-                
-                words = [k for (k,v) in junction.items()]
-                
-                for word in words:
-                        sWords = [':'.join(sArr) for sArr in snakes]
-                        print(word)
-                        i = 0
-                        for sword in sWords:
-                                if(sword.find(word) > -1):
-                                        yank = snakes[i]
-                                        snakes.pop(i)
-                                        print(snakes, yank)
-                                        #	todo: add two arr together
-                                print(sword.find(word))
-                                i += 1
-
-                snakes.append(words)
-                print("-snakes", snakes)
-                        
-                        
-                
-
-
+                print("j", junction)
+                index = 0
+                for word in junction.wordstrings:
+                        for snake in snakes:
+                                res = snake[0][0].compare_wordstrings(word)
+                                index += 1

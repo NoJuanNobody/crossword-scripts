@@ -77,3 +77,10 @@ class WordPairTest(unittest.TestCase):
         EsArr = [ key for (key, value) in Es]
         self.assertEqual(EsArr, [3,3,2,2,1,1])
 
+    def test_compareWordstrings(self):
+        """
+            should be able to tell if there i a word match btwn two word strings
+        """
+        print("compare wordstrings")
+        self.assertFalse(self.wp.compare_wordstrings('jat'))
+        self.assertTrue(self.wp.compare_wordstrings('auror'))

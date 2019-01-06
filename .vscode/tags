@@ -1,0 +1,168 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Combinator	../Histogram.py	/^from combinator import Combinator$/;"	kind:namespace	line:2
+Combinator	../WordBank.py	/^from combinator import Combinator$/;"	kind:namespace	line:3
+Combinator	../combinator.py	/^class Combinator:$/;"	kind:class	line:2
+Combinator	../tests/test_comb.py	/^from combinator import Combinator$/;"	kind:namespace	line:4
+CombinatorTest	../tests/test_comb.py	/^class CombinatorTest(unittest.TestCase):$/;"	kind:class	line:6
+Crossword	../old version/crossword.py	/^class Crossword:$/;"	kind:class	line:24
+Crossword	../old version/main.py	/^from crossword import Crossword$/;"	kind:namespace	line:4
+HistEntry	../HistEntry.py	/^class HistEntry:$/;"	kind:class	line:1
+HistEntry	../Histogram.py	/^from HistEntry import HistEntry$/;"	kind:namespace	line:1
+HistEntry.py	../HistEntry.py	1;"	kind:file	line:1
+Histogram	../Histogram.py	/^class Histogram:$/;"	kind:class	line:3
+Histogram	../Word.py	/^from Histogram import Histogram$/;"	kind:namespace	line:1
+Histogram	../WordPair.py	/^from Histogram import Histogram$/;"	kind:namespace	line:1
+Histogram	../tests/test_histogram.py	/^from Histogram import Histogram$/;"	kind:namespace	line:4
+Histogram	../tests/test_wordPair.py	/^from Histogram import Histogram$/;"	kind:namespace	line:5
+Histogram.py	../Histogram.py	1;"	kind:file	line:1
+HistogramTest	../tests/test_histogram.py	/^class HistogramTest(unittest.TestCase):$/;"	kind:class	line:6
+IT	../old version/layout.py	/^import iterators as IT$/;"	kind:namespace	line:1
+Junction	../old version/junction.py	/^class Junction:$/;"	kind:class	line:1
+Junction	../old version/main.py	/^from junction import Junction$/;"	kind:namespace	line:6
+Orientation	../old version/crossword.py	/^class Orientation(enum.Enum):$/;"	kind:class	line:3
+PairSelector	../old version/main.py	/^from pairSelector import PairSelector$/;"	kind:namespace	line:2
+PairSelector	../old version/pairSelector.py	/^class PairSelector:$/;"	kind:class	line:1
+Tile	../old version/crossword.py	/^class Tile:$/;"	kind:class	line:8
+Word	../Word.py	/^class Word:$/;"	kind:class	line:3
+Word	../WordBank.py	/^from Word import Word$/;"	kind:namespace	line:2
+Word	../WordPair.py	/^from Word import Word$/;"	kind:namespace	line:2
+Word	../old version/main.py	/^from Word import Word$/;"	kind:namespace	line:5
+Word	../tests/test_histogram.py	/^from Word import Word$/;"	kind:namespace	line:5
+Word	../tests/test_word.py	/^from Word import Word$/;"	kind:namespace	line:4
+Word.py	../Word.py	1;"	kind:file	line:1
+WordBank	../WordBank.py	/^class WordBank:$/;"	kind:class	line:7
+WordBank	../old version/main.py	/^from wordBank import WordBank$/;"	kind:namespace	line:1
+WordBank	../tests/test_wordBank.py	/^from WordBank import WordBank$/;"	kind:namespace	line:4
+WordBank.py	../WordBank.py	1;"	kind:file	line:1
+WordBankTest	../tests/test_wordBank.py	/^class WordBankTest(unittest.TestCase):$/;"	kind:class	line:7
+WordPair	../WordBank.py	/^from WordPair import WordPair$/;"	kind:namespace	line:4
+WordPair	../WordPair.py	/^class WordPair:$/;"	kind:class	line:5
+WordPair	../tests/test_wordBank.py	/^from WordPair import WordPair$/;"	kind:namespace	line:5
+WordPair	../tests/test_wordPair.py	/^from WordPair import WordPair$/;"	kind:namespace	line:4
+WordPair.py	../WordPair.py	1;"	kind:file	line:1
+WordPairTest	../tests/test_wordPair.py	/^class WordPairTest(unittest.TestCase):$/;"	kind:class	line:7
+WordTest	../tests/test_word.py	/^class WordTest(unittest.TestCase):$/;"	kind:class	line:7
+__init__	../HistEntry.py	/^    def __init__(self, char, word):$/;"	kind:member	line:2
+__init__	../Histogram.py	/^    def __init__(self, referenceChars, entities, unique):$/;"	kind:member	line:4
+__init__	../Word.py	/^    def __init__(self, word):$/;"	kind:member	line:4
+__init__	../WordBank.py	/^        def  __init__(self):$/;"	kind:member	line:8
+__init__	../WordPair.py	/^    def __init__(self, word1, word2):$/;"	kind:member	line:6
+__init__	../combinator.py	/^    def __init__(self, cb):$/;"	kind:member	line:3
+__init__	../old version/crossword.py	/^    def __init__(self):$/;"	kind:member	line:25
+__init__	../old version/crossword.py	/^    def __init__(self, char, x, y):$/;"	kind:member	line:9
+__init__	../old version/junction.py	/^    def __init__(self, char, primary, secondary):$/;"	kind:member	line:2
+__init__	../old version/pairSelector.py	/^    def __init__(self, wordPairs):$/;"	kind:member	line:2
+bank	../old version/main.py	/^bank = WordBank()$/;"	kind:variable	line:9
+calculate_Entanglement	../WordPair.py	/^    def calculate_Entanglement(self, junctions):$/;"	kind:member	line:36
+combination_exsists	../combinator.py	/^    combination_exsists = lambda self, x, xs: [i for (y, i) in zip(xs, range(len(xs))) if x == y or x == y[::-1]]$/;"	kind:variable	line:7
+combinator.py	../combinator.py	1;"	kind:file	line:1
+cross_prod	../combinator.py	/^    def cross_prod(self, arr, arr2):$/;"	kind:member	line:21
+crossword	../old version/main.py	/^    crossword = Crossword()$/;"	kind:variable	line:14
+crossword.py	../old version/crossword.py	1;"	kind:file	line:1
+deepcopy	../WordBank.py	/^from copy import deepcopy$/;"	kind:namespace	line:5
+deepcopy	../WordPair.py	/^from copy import deepcopy$/;"	kind:namespace	line:3
+enum	../old version/crossword.py	/^import enum$/;"	kind:namespace	line:1
+exists	../Word.py	/^    exists = lambda self, x:[i for (y, i) in zip(self.uniqueChars, range(len(self.uniqueChars))) if x == y]$/;"	kind:variable	line:9
+find_hist_entry	../Word.py	/^    def find_hist_entry(self, char):$/;"	kind:member	line:11
+getCoordinate	../old version/layout.py	/^def getCoordinate(tile):$/;"	kind:function	line:24
+get_common_characters	../WordPair.py	/^    def get_common_characters(self):$/;"	kind:member	line:28
+get_coords	../old version/crossword.py	/^    def get_coords(self):$/;"	kind:member	line:15
+get_frame_at	../WordBank.py	/^        def get_frame_at(self, history):$/;"	kind:member	line:30
+get_hist_entry	../Histogram.py	/^    def get_hist_entry(self, char):$/;"	kind:member	line:14
+get_indexes	../HistEntry.py	/^    get_indexes = lambda self, x, xs:[(i, xs) for (y, i) in zip(xs, range(len(xs))) if x == y]$/;"	kind:variable	line:6
+get_indexes	../combinator.py	/^    get_indexes = lambda self, x, xs: [i for (y, i) in zip(xs, range(len(xs))) if x == y]$/;"	kind:variable	line:6
+get_junctions	../Histogram.py	/^    def get_junctions(self, char):$/;"	kind:member	line:19
+get_junctions	../WordPair.py	/^    def get_junctions(self):$/;"	kind:member	line:20
+get_max_cords	../old version/crossword.py	/^    def get_max_cords(self):$/;"	kind:member	line:110
+get_tile_by_char	../old version/crossword.py	/^    def get_tile_by_char(self, tiles, char):$/;"	kind:member	line:38
+get_unique_chars	../Word.py	/^    def get_unique_chars(self, word):$/;"	kind:member	line:14
+get_unique_chars_str	../Word.py	/^    def get_unique_chars_str(self):$/;"	kind:member	line:17
+get_wordpairs_at	../WordBank.py	/^        def get_wordpairs_at(self, history):$/;"	kind:member	line:27
+is_neighbor	../old version/junction.py	/^    def is_neighbor(self):$/;"	kind:member	line:18
+iterate	../combinator.py	/^    def iterate(self, arr):$/;"	kind:member	line:9
+iterateState	../WordBank.py	/^        def iterateState(self):$/;"	kind:member	line:22
+iterate_around_junction	../old version/crossword.py	/^    def iterate_around_junction(self, word, locale, cb):$/;"	kind:member	line:61
+junction.py	../old version/junction.py	1;"	kind:file	line:1
+junctionCallback	../Histogram.py	/^    def junctionCallback(self, ent, ent2):$/;"	kind:member	line:28
+junction_output	../old version/junction.py	/^    def junction_output(self):$/;"	kind:member	line:21
+layout.py	../old version/layout.py	1;"	kind:file	line:1
+main.py	../old version/main.py	1;"	kind:file	line:1
+make_combinations	../WordBank.py	/^        def make_combinations(self, words):$/;"	kind:member	line:17
+merge_crossword	../old version/crossword.py	/^    def merge_crossword(self, secondaryCrossword, junction):$/;"	kind:member	line:92
+merge_snakes	../WordBank.py	/^        def merge_snakes(self, snakes,  junction):$/;"	kind:member	line:98
+next	../old version/pairSelector.py	/^    def next(self):$/;"	kind:member	line:10
+pairSelector.py	../old version/pairSelector.py	1;"	kind:file	line:1
+place_char	../old version/crossword.py	/^    def place_char(self, word, pos, index, orientation):$/;"	kind:member	line:78
+place_root_word	../old version/crossword.py	/^    def place_root_word(self, root, junction):$/;"	kind:member	line:34
+place_word	../old version/crossword.py	/^    def place_word(self, word, junction):$/;"	kind:member	line:86
+place_word_pair	../old version/crossword.py	/^    def place_word_pair(self, wordPair):$/;"	kind:member	line:107
+prepare_locale	../old version/crossword.py	/^    def prepare_locale(self, word, junction):$/;"	kind:member	line:45
+print_crossword	../old version/crossword.py	/^    def print_crossword(self):$/;"	kind:member	line:131
+recalc_entanglement	../old version/pairSelector.py	/^    def recalc_entanglement(self):$/;"	kind:member	line:14
+remainingJunctions	../WordPair.py	/^    def remainingJunctions(self, junc, juncs):$/;"	kind:member	line:43
+remove_word_list	../WordBank.py	/^        def remove_word_list(self, words, junction):$/;"	kind:member	line:90
+sameJunction	../WordBank.py	/^        def sameJunction(self, j1, j2):$/;"	kind:member	line:45
+select	../old version/junction.py	/^    def select(self):$/;"	kind:member	line:12
+select_junction	../old version/pairSelector.py	/^    def select_junction(self, wp):$/;"	kind:member	line:17
+select_new_wordPairs	../WordBank.py	/^        def select_new_wordPairs(self):$/;"	kind:member	line:52
+selector	../old version/main.py	/^selector = PairSelector(bank.wordPairs)$/;"	kind:variable	line:11
+setCoordinate	../old version/layout.py	/^def setCoordinate(params):$/;"	kind:function	line:17
+setUp	../tests/test_comb.py	/^    def setUp(self):$/;"	kind:member	line:8
+setUp	../tests/test_histogram.py	/^    def setUp(self):$/;"	kind:member	line:8
+setUp	../tests/test_word.py	/^    def setUp(self):$/;"	kind:member	line:9
+setUp	../tests/test_wordBank.py	/^    def setUp(self):$/;"	kind:member	line:9
+setUp	../tests/test_wordPair.py	/^    def setUp(self):$/;"	kind:member	line:10
+shake	../WordPair.py	/^    def shake(self):$/;"	kind:member	line:67
+shake_junctions	../WordBank.py	/^        def shake_junctions(self): $/;"	kind:member	line:36
+shake_wp	../WordBank.py	/^        def shake_wp(self):$/;"	kind:member	line:41
+sort_E	../WordPair.py	/^    def sort_E(self, elem):$/;"	kind:member	line:64
+sort_WP	../WordBank.py	/^        def sort_WP(self, elem):$/;"	kind:member	line:33
+switch_orientation	../old version/crossword.py	/^    def switch_orientation(self):$/;"	kind:member	line:31
+sys	../tests/test_comb.py	/^import sys$/;"	kind:namespace	line:2
+sys	../tests/test_histogram.py	/^import sys$/;"	kind:namespace	line:2
+sys	../tests/test_word.py	/^import sys$/;"	kind:namespace	line:2
+sys	../tests/test_wordBank.py	/^import sys$/;"	kind:namespace	line:2
+sys	../tests/test_wordPair.py	/^import sys$/;"	kind:namespace	line:2
+take_entanglement	../old version/pairSelector.py	/^    def take_entanglement(self,elem):$/;"	kind:member	line:7
+testInitialization	../tests/test_word.py	/^    def testInitialization(self):$/;"	kind:member	line:13
+testIter	../tests/test_comb.py	/^    def testIter(self):$/;"	kind:member	line:12
+test_CrossProduct	../tests/test_comb.py	/^    def test_CrossProduct(self):$/;"	kind:member	line:20
+test_calc_E	../tests/test_wordPair.py	/^    def test_calc_E(self):$/;"	kind:member	line:46
+test_comb.py	../tests/test_comb.py	1;"	kind:file	line:1
+test_combination_exsists	../tests/test_comb.py	/^    def test_combination_exsists(self):$/;"	kind:member	line:29
+test_getCommChars	../tests/test_wordPair.py	/^    def test_getCommChars(self):$/;"	kind:member	line:38
+test_getJunctions	../tests/test_wordPair.py	/^    def test_getJunctions(self):$/;"	kind:member	line:28
+test_get_hist_entry	../tests/test_histogram.py	/^    def test_get_hist_entry(self):$/;"	kind:member	line:11
+test_histogram.py	../tests/test_histogram.py	1;"	kind:file	line:1
+test_init	../tests/test_wordPair.py	/^    def test_init(self):$/;"	kind:member	line:17
+test_jShake	../tests/test_wordBank.py	/^    def test_jShake(self):$/;"	kind:member	line:21
+test_junctionNotCommonChar	../tests/test_histogram.py	/^    def test_junctionNotCommonChar(self):$/;"	kind:member	line:77
+test_junction_init	../tests/test_histogram.py	/^    def test_junction_init(self):$/;"	kind:member	line:24
+test_junctions_init	../tests/test_histogram.py	/^    def test_junctions_init(self):$/;"	kind:member	line:40
+test_large	../tests/test_comb.py	/^    def test_large(self):$/;"	kind:member	line:38
+test_makeCombinations	../tests/test_wordBank.py	/^    def test_makeCombinations(self):$/;"	kind:member	line:14
+test_merge_snakes	../tests/test_wordBank.py	/^    def test_merge_snakes(self):$/;"	kind:member	line:54
+test_removeNeigbors	../tests/test_wordPair.py	/^    def test_removeNeigbors(self):$/;"	kind:member	line:53
+test_select_new_wordPars	../tests/test_wordBank.py	/^    def test_select_new_wordPars(self):$/;"	kind:member	line:41
+test_shake	../tests/test_wordPair.py	/^    def test_shake(self):$/;"	kind:member	line:70
+test_uniquechars	../tests/test_word.py	/^    def test_uniquechars(self):$/;"	kind:member	line:26
+test_word.py	../tests/test_word.py	1;"	kind:file	line:1
+test_wordBank.py	../tests/test_wordBank.py	1;"	kind:file	line:1
+test_wordPair.py	../tests/test_wordPair.py	1;"	kind:file	line:1
+test_wpShake	../tests/test_wordBank.py	/^    def test_wpShake(self):$/;"	kind:member	line:29
+unittest	../tests/test_comb.py	/^import unittest$/;"	kind:namespace	line:1
+unittest	../tests/test_histogram.py	/^import unittest$/;"	kind:namespace	line:1
+unittest	../tests/test_word.py	/^import unittest$/;"	kind:namespace	line:1
+unittest	../tests/test_wordBank.py	/^import unittest$/;"	kind:namespace	line:1
+unittest	../tests/test_wordPair.py	/^import unittest$/;"	kind:namespace	line:1
+unselect	../old version/junction.py	/^    def unselect(self):$/;"	kind:member	line:15
+update_crossword_coords	../old version/crossword.py	/^    def update_crossword_coords(self, lastLocale):$/;"	kind:member	line:99
+words	../old version/main.py	/^words = ['parvitude','peruvian']$/;"	kind:variable	line:8
+wp	../old version/main.py	/^    wp = selector.next()$/;"	kind:variable	line:13
+x	../old version/crossword.py	/^        x = 1$/;"	kind:variable	line:4
+y	../old version/crossword.py	/^        y = 2$/;"	kind:variable	line:5
