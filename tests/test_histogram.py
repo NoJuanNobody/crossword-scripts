@@ -31,9 +31,11 @@ class HistogramTest(unittest.TestCase):
         self.originalWords = ["wonderous", 'proton']
         self.hist = Histogram([self._char], self.originalWords, True)
         junctions = self.hist.get_junctions(self._char)
-        
-        self.assertEqual(self._char, junctions[0])
-        self.assertEqual(len(junctions[1]), 4)
+        for item in junctions:
+            for key, value in item.items():
+                self.assertEqual(self._char, key[value])
+        # self.assertEqual(self._char, junctions[0])
+        self.assertEqual(len(junctions), 4)
 
     def test_junctions_init(self):
         """test that histogram can create many junctions
@@ -43,17 +45,48 @@ class HistogramTest(unittest.TestCase):
         print("""histogram can make many junctions""")
         wonderous = Word("wonderous")
         proton = Word("proton")
-        self._chars = wonderous.get_unique_chars_str() + proton.get_unique_chars_str()
-        print(self._chars)
+        WORDUTIL = Word("")
+        self._chars = WORDUTIL.get_unique_chars(wonderous.word + proton.word)
         self.originalWords = [wonderous.word, proton.word]
         self.hist = Histogram(self._chars, self.originalWords, True)
         junctions_r = self.hist.get_junctions('r')
         junctions_o = self.hist.get_junctions('o')
         junctions_n = self.hist.get_junctions('n')
-        self.assertEqual('r', junctions_r[0])
-        print(junctions_r)
-        self.assertEqual(len(junctions_r[1]), 1)
-        self.assertEqual('o', junctions_o[0])
-        self.assertEqual(len(junctions_o[1]), 4)
-        self.assertEqual('n', junctions_n[0])
-        self.assertEqual(len(junctions_n[1]), 1)
+
+        junctions_r = self.hist.get_junctions('r')
+        for item in junctions_r:
+            for key, value in item.items():
+                self.assertEqual('r', key[value])
+        self.assertEqual(len(junctions_r), 1)
+        for item in junctions_o:
+            for key, value in item.items():
+                self.assertEqual('o', key[value])
+        self.assertEqual(len(junctions_o), 4)
+        for item in junctions_n:
+            for key, value in item.items():
+                self.assertEqual('n', key[value])
+        self.assertEqual(len(junctions_n), 1)
+
+        # for key, value in junctions_r:
+        #     self.assertEqual('o', key[value])
+        # self.assertEqual(len(junctions_o[1]), 4)
+        # for key, value in junctions_r:
+        #     self.assertEqual('n', key[value])
+        # self.assertEqual(len(junctions_n[1]), 1)
+
+    def test_junctionNotCommonChar(self):
+        """ tests the case when a junction is returned
+        when that character is not a common char"""
+        print("junction should be empty")
+        wonderous = Word("wonderous")
+        proton = Word("proton")
+        WORDUTIL = Word("")
+        self._chars = WORDUTIL.get_unique_chars(wonderous.word + proton.word)
+        self.originalWords = [wonderous.word, proton.word]
+        self.hist = Histogram(self._chars, self.originalWords, True)
+        junctions = self.hist.get_junctions('w')
+        for item in junctions:
+            for key, value in item.items():
+                self.assertEqual('w', key[value])
+        self.assertEqual(len(junctions), 0)
+        

@@ -12,7 +12,7 @@ class Word:
         return self.hist.get_hist_entry(char)
 
     def get_unique_chars(self, word):
-        return list(sorted(set(self.word)))
+        return list(sorted(set(word)))
 
     def get_unique_chars_str(self):
         return ''.join(self.uniqueChars)

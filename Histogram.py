@@ -23,7 +23,7 @@ class Histogram:
                 entries.append(value)
         combinator = Combinator(self.junctionCallback)
         res =  combinator.cross_prod(entries[0].indexes, entries[1].indexes)
-        return (char, res)
+        return res
 
     def junctionCallback(self, ent, ent2):
-        return [ent, ent2]
+        return {ent[1]:ent[0], ent2[1]:ent2[0]}

@@ -23,3 +23,13 @@ class WordTest(unittest.TestCase):
         for char in self.originalWord:
             self.assertTrue(uniquechars.find(char) > -1)
 
+    def test_uniquechars(self):
+        """
+        can print unique chars from other
+        word instance
+        """
+        print("can print unique words from params")
+        genWInst = Word("")
+        self.word = "coolout"
+        self.uniques = genWInst.get_unique_chars(self.word)
+        self.assertEqual(len(self.uniques), 5)
